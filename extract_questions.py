@@ -4,7 +4,7 @@
 HTML Question Extractor
 通用HTML题目提取工具
 Author: 橘子海 (QQ: 347870660)
-GitHub: https://github.com/yourusername/html-question-extractor
+GitHub: https://github.com/347870660/HTML-Question-Extractor
 """
 
 import re
@@ -20,6 +20,7 @@ class QuestionExtractor:
         self.version = "1.0.0"
         self.author = "橘子海"
         self.contact = "QQ: 347870660"
+        self.github_url = "https://github.com/347870660/HTML-Question-Extractor"
     
     def extract_questions(self, html_content):
         """
@@ -169,6 +170,7 @@ class QuestionExtractor:
         file_obj.write(f"工具: HTML Question Extractor v{self.version}\n")
         file_obj.write(f"作者: {self.author}\n")
         file_obj.write(f"联系: {self.contact}\n")
+        file_obj.write(f"GitHub: {self.github_url}\n")
         file_obj.write(f"总题数: {len(results)}题\n")
         file_obj.write(f"选择题: {multiple_choice_count}题\n")
         file_obj.write(f"主观题: {subjective_count}题\n")
@@ -228,7 +230,7 @@ def process_files():
     print(f"版本: {extractor.version}")
     print(f"作者: {extractor.author}")
     print(f"联系: {extractor.contact}")
-    print("GitHub: https://github.com/yourusername/html-question-extractor")
+    print(f"GitHub: {extractor.github_url}")
     print("=" * 60)
     
     # 检查HTML文件
